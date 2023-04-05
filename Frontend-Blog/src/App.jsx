@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,8 +10,11 @@ import UserProvider from './component/context/UserContext'
 import UserRoute from './component/PrivateRoute/UserRoute'
 import Home from './component/Home'
 import UserAddedBlogs from './component/UserAddedBlogs'
+import EditSingleBlog from './component/EditSingleBlog'
+
 
 function App() {
+
 
 
   return (
@@ -24,6 +27,7 @@ function App() {
             <Route path='addblog' element={<UserRoute><AddBlog /></UserRoute>} />
             <Route path='' element={<Home />} />
             <Route path='u-addedblogs' element={<UserAddedBlogs />} />
+            <Route path='editblog' element={<EditSingleBlog />} />
           </Routes>
         </BrowserRouter>
       </UserProvider>

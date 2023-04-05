@@ -1,3 +1,11 @@
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 .box{
   width: 100vw;
   height: 100vh;
@@ -18,7 +26,7 @@
   height: 50px;
   border-radius: 8px;
   border: 1px solid white;
-  background-color: rgb(248, 235, 235);
+  background-color: #d4d4d4;
 }
 .buttons{
   width: 300px;
@@ -46,6 +54,8 @@ button{
 .signuph1{
   color: rgb(240, 10, 10);
   text-decoration: underline;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 4em;
 }
 .log-btn-sinpage{
   color:rgb(238, 238, 238) ;
@@ -63,6 +73,7 @@ button{
   font-size: 3em;
   color: red;
   text-decoration:underline;
+  font-family: 'Kaushan Script', cursive;
 }
 .blogh2{
   margin-left: 100px;
@@ -75,8 +86,8 @@ button{
   height: 40px;
   border-radius: 8px;
   border: 1px solid white;
-  background-color:rgb(248, 235, 235) ;
   font-size: larger;
+  background-color: #d4d4d4;
 }
 .blogtextarea{
   margin-left: 90px;
@@ -85,13 +96,14 @@ button{
   border-radius: 5px;
   font-size: 1.5em;
   border: 1px solid white;
-  background-color: rgb(248, 235, 235);
+  background-color: #d4d4d4;
 }
 .signuph2{
   color: white;
+  font-size: 2.5em;
 }
 body{
-  background-color:rgb(148, 136, 136);
+  background-color:rgb(0, 0, 0);
 }
 .blogbtn{
   width: 300px;
@@ -101,11 +113,15 @@ body{
 }
 .nav{
   width: 100vw;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color:white;
+  background-color: red;
+  transform: translate(0px,-10px);
+  
+
 }
 .navchild1{
   height: 40px;
@@ -113,6 +129,7 @@ body{
   justify-content: space-around;
   align-items: center;
   width: 300px;
+  transform: translate(-230px);
 }
 .navchild2{
   height: 40px;
@@ -121,29 +138,93 @@ body{
   justify-content: space-around;
   align-items: center;
 }
+.div{
+  width: 100vw;
+  height: 30px;
+  /* background-color: aqua; */
+  backdrop-filter: blur(3px);
 
+  background-image: linear-gradient(-180deg,transparent,rgb(5, 5, 5));
+  transform: translate(0px,-25px);
+}
 
 /* HomeAllblog css */
 
 .card {
   position: relative;
-  width: 380px;
+  width: 1200px;
   height: 250px;
   color: #2e2d31;
   background: #e70d0d;
   overflow: hidden;
   border-radius: 20px;
 }
+.home-person-logo{
+  width: 120px;
+  height: 40px;
+}
+.arrow{
+  color: red;
+}
+.arr1{
+  width:17px;
+  height: 17px;
+  border: 1px solid red;
+  border-radius: 3px;
+}
+.arr-out{
+  transform: translate(5px,-11px);
+}
+.img-cards{
+  width: 300px;
+  height: 400px;
+  margin-top: 90px;
+  border-radius: 7px;
+  margin-left: 30px;
+  margin-right: 30px;
+  object-fit: cover;
+  -webkit-filter: grayscale(100%);
+  box-shadow: rgba(124, 124, 129, 0.507) 0px 7px 29px 0px;
+  
+}
+.img-cards:hover{
+  -webkit-filter:none;
+  transition: all 0.5s;
 
+}
+.img-cards:hover img{
+  transform: scale(1.1);
+}
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.cmt{
+  color: white;
+  font-size: 7em;
+  margin-top: 80px;
+  font-family: 'Satisfy', cursive;
+  margin-left: 50px;
+}
+.quote{
+  color: white;
+  font-size: 3em;
+  font-family: 'Satisfy', cursive;
+  transform: translate(30px,-60px);
+}
 .temporary_text {
   font-weight: bold;
   font-size: 2.5em;
   padding: 6px 12px;
   color: #f8f8f8;
+  margin-left: 10px;
 }
 
 .card_title {
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .card_content {
@@ -189,6 +270,7 @@ body{
   font-size: 14px;
   opacity: 0;
   transition: opacity .5s;
+  transform: translate(900px,-70px);
 }
 
 .card:hover .card_content {
@@ -204,10 +286,24 @@ body{
   width: 100vw;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 550px;
+  overflow-y: scroll;
+  border-radius: 30px;
+  border: 2px solid black;
 }
   
 .allblogcards{
   margin: 10px;
+}
+.homeicons{
+  width: 1150px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid; */
+  align-items: center;
+  color: red;
+  /* margin-top: 9px; */
 }
 
 .headblog{
@@ -215,85 +311,355 @@ body{
   color:white;
   margin-left: 60px;
   margin-top: 100px;
+  font-family: 'Kaushan Script', cursive;
 }
 .logoda{
   transform: translate(-20px);
   font-size: 2.5em;
+  font-weight: 1000;
   font-style: oblique;
-  color: red;
+  color: rgb(3, 3, 3);
+  /* font-family: 'Kaushan Script', cursive; */
 }
 
 
 /* userblogcardcss */
 
-.card {
-  width: 250px;
-  height: 90px;
-  background: #262626;
-}
-
-.smallIcon {
-  width: 100%;
-  height: 100%;
-  background-color: #ff5858;
-}
-
-.smallIcon div {
-  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 
-  40%, #e5e5e5 48%);
-  margin-top: 10px;
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  animation: load89234 2s infinite;
-  color: #262626;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.Icon {
+.carduserblog{
+  box-sizing: border-box;
+  width: 550px;
+  height: 280px;
+  background: rgb(255, 255, 255);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  /* backdrop-filter: blur(6px); */
+  border-radius: 17px;
+  /* text-align: center; */
+  cursor: pointer;
+  transition: all 0.5s;
+  /* display: flex; */
+  /* align-items: stretch; */
+  /* justify-content: center; */
+  /* user-select: none;                                                                                                        */
+  font-weight: bolder;
+  color: black;
   margin: 10px;
-  width: 70px;
-  height: 70px;
-  float: left;
-  border-radius: 5px;
+  padding-left: 10px;
 }
 
-.Name {
-  width: 90px;
-  height: 20px;
-  float: left;
-  transform: translate(10px ,0px);
-  border-radius: 5px;
+.carduserblog:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
 }
 
-.Roles {
+.carduserblog:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.login-signup-btn{
+  color: #0f0e0e;
+  text-decoration: none;
+}
+
+
+/* button */
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  /* margin: 10px; */
+  font-size: 18px;
+  border-radius: 20px;
+  background: #ffffff;
+  transform: translate(-20px);
+  
+  /* border: 1px solid #e8e8e8; */
+  /* box-shadow: 6px 6px 12px #d32929,
+  -6px -6px 12px #d33a3a; */
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #e21616;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid #900000;
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: #ec1111;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: #ff0000;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* button3 home */
+.button3 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  /* box-shadow: 6px 6px 12px #d32929,
+             -6px -6px 12px #d33a3a; */
+}
+
+.button3:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #dd2626,
+             inset -4px -4px 12px #e63434;
+}
+
+.button3:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button3:after {
+  /* content: ""; */
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #ff0a0a;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button3:hover {
+  color: #ffffff;
+  /* border: 1px solid #009087; */
+  border: 1px solid #900000;
+}
+
+.button3:hover:before {
+  top: -35%;
+  /* background-color: #009087; */
+  background-color: #ec1111;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button3:hover:after {
+  top: -45%;
+  /* background-color: #009087 */
+  background-color: #ff0000;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+
+.userblogcard{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.authorname{
+  margin: 5px;
+  font-size: xx-large;
+  margin-right: 180px;
+  color: red;
+  margin-bottom: 20px;
+}
+.Name{
+  margin: 10px;
+  font-size: larger;
+  /* width: 200px; */
+  /* height: 30px; */
+  overflow-wrap: break-word;
+  /* margin-left: 10px; */
+  color: rgb(138, 137, 137);
+  
+}
+
+
+/* Edit blog */
+
+
+.cardedit {
+  width: 850px;
+  height: 570px;
+  border-radius: 30px;
+  background: #000000;
+  box-shadow: 15px 15px 30px rgb(37, 13, 13),
+              -15px -15px 30px rgb(36, 10, 10);
+              transform: translate(230px,30px);
+ }
+ .usercarddiscription{
+  /* width: 400px; */
+margin: 10px;
+color: rgb(138, 137, 137);
+ }
+ .userbloghead{
+  color: red;
+  font-size: 3em;
+  width: 400px;
+  height: 100px;
+  margin-left: 60px;
+  font-family: 'Kaushan Script', cursive;
+
+
+ }
+
+.delete-edit-icons{
+  /* border: 1px solid black; */
+  width: 500px;
+  height: 40px;
+transform: translate(0px,17px);
+display: flex;
+justify-content: space-around;
+}
+.usericons{
   width: 40px;
-  height: 20px;
-  float: left;
-  transform: translate(20px ,0px);
-  border-radius: 5px;
+  height: 40px;
+  background-color: transparent;
+  color: black;
 }
+.usericons:hover{
+  border: none;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  transform: scale(1.5);
+  box-shadow: rgb(12, 10, 10) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(175, 171, 171, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  
+  transition: 0.5s ease;
 
-.Descripion {
+}
+.Descripion{
   margin: 10px;
-  width: 140px;
-  height: 45px;
-  float: left;
-  transform: translate(0px ,-5px);
+  color: rgb(138, 137, 137);
+
+}
+.person{
+/* border: 1px solid; */
+height: 60px;
+margin-top: 5px;
+width: 140px;
+display: flex;
+align-items: center;
+
+}
+.personicon{
+  transform: translate(0px,-8px);
+  /* transform: scale(1.5); */
+  font-size: 1em;
+}
+.edith1{
+  color: red;
+  margin-left: 60px;
+  transform: translate(0px,30px);
+  font-size: 3em;
+  font-family: 'Kaushan Script', cursive;
+  
+}
+.edith2{
+  color: white;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+.edith3{
+  color: white;
+  margin-left: 30px;
+}
+.editinput{
+  width: 500px;
+  margin-left: 30px;
+  font-family: 'Acme', sans-serif;
+  height: 50px;
+  font-size: larger;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+}
+.edittextarea{
+  width: 700px;
+  margin-left: 30px;
+  font-family: 'Acme', sans-serif;
+  height: 170px;
+  font-size: larger;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+
+}
+.edit-btn{
+  width: 100px;
+  height: 50px;
+  transform: translate(350px,20px);
+}
+.addblog-linktag{
+  color:white;
+  text-decoration: none;
+}
+.login-img{
+  width: 600px;
+  height: 400px;
+  margin-right: 60px;
+  transform: translate(0px,80px);
   border-radius: 5px;
+  -webkit-filter: grayscale(100%);
 }
-
-@keyframes load89234 {
-  100% {
-    background-position: -100% 0;
-  }
+.login-img:hover{
+  -webkit-filter:none;
+  transition: all 0.5s;
 }
-
-
-
-
-
-
-
-
-

@@ -10,6 +10,7 @@ function Login() {
     const usernameref=useRef()
     const userpasswordref=useRef()
     const { setloggedinuser}=useContext(UserContext) //used for contain user details globaly
+    
     const navigate=useNavigate()
 async function loginuser(){
     
@@ -22,6 +23,7 @@ async function loginuser(){
     if(res.data.success==true){
     
         setloggedinuser(res.data.user)
+        localStorage.setItem("loggedinuser",JSON.stringify(res.data.user)) ///to store in local storage in chrome we can see it in inspect---application
         navigate("/addblog")
     }else{
         alert("not logined")
@@ -30,6 +32,7 @@ async function loginuser(){
 
   return (
     <div className="box">
+        <img src="https://blog.ipleaders.in/wp-content/uploads/2018/02/BV-Acharya-17.jpg" className='login-img' alt="" />
     <div className="signup">
     <h1 className="signuph1">Login</h1>
     <h2 className="signuph2">Username</h2>

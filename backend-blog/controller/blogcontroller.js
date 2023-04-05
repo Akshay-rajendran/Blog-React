@@ -48,6 +48,40 @@ const singleblog=async(req,res)=>{
     }
 }
 
+const deletesingleblog=async(req,res)=>{
+    try {
+        let deleteblog=await blogModel.deleteOne({_id:req.params.id})
+        res.json({
+            success:true,
+            msg:"single blog deleted ",
+            deleteblog
+        })
+    } catch (error) {
+        res.json({
+            success:false,
+            msg:"cannot dlete blog",
+        
+
+        })
+        console.log(error);
+        
+    }
+
+}
+
+const editsignleblog=async(req,res)=>{
+    try {
+        await blogModel.findOneAndUpdate({ _id: req.params.id }, req.body, { runValidators: true })
+        res.json({success:true,
+            msg:"successfully update"}
+            )
+    } catch (error) {
+        res.json({
+            success: false,
+            msg: "cant updated,something went wrong in server"
+        })
+    }
+}
 
       
-module.exports={addblog, allblog,singleblog}
+module.exports={addblog, allblog,singleblog,deletesingleblog,editsignleblog}

@@ -18,7 +18,7 @@ async function fetchuseraddedblog(){
     console.log(res.data.singleblog);
 }    
 
-useEffect(()=>{fetchuseraddedblog()},[])
+useEffect(()=>{fetchuseraddedblog()},[loggedinuser])
 
   return (
    <div className="userblog">

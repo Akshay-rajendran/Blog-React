@@ -43,7 +43,7 @@ function Signup() {
         <input type="text" className="signuinput" ref={userpasswordref} /><br />
         <div className="buttons">
           <button onClick={signin}>Singin</button>
-          <button><Link to="login" className='log-btn-sinpage'>Login</Link></button>
+          <button><Link to="/login" className='log-btn-sinpage'>Login</Link></button>
         </div>
       </div>
     </div>
