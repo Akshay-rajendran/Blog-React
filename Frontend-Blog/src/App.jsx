@@ -11,6 +11,7 @@ import UserRoute from './component/PrivateRoute/UserRoute'
 import Home from './component/Home'
 import UserAddedBlogs from './component/UserAddedBlogs'
 import EditSingleBlog from './component/EditSingleBlog'
+import About from './component/About'
 
 
 function App() {

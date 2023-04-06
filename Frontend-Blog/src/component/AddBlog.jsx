@@ -4,6 +4,7 @@ import { UserContext } from './context/UserContext'
 import axios from 'axios'
 import { BlogAddApi } from '../Api/api'
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar from './Navbar'
 
 function AddBlog() {
     const { loggedinuser}=useContext(UserContext)
@@ -27,6 +28,8 @@ async function add(){
 
 
   return (
+    <>
+    <Navbar/>
     <div className="blogbox">
         <h1 className="blogh1">Add Blog</h1>
         <h2 className="blogh2">Blog Name</h2>
@@ -37,6 +40,7 @@ async function add(){
         <button className="blogbtn" onClick={add}>Add </button>
         <button className="blogbtn" ><Link className='addblog-linktag' to="/u-addedblogs">view blogs</Link></button>
     </div>
+    </>
   )
 }
 

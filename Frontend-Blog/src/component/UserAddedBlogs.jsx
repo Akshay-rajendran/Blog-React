@@ -4,6 +4,9 @@ import { useContext } from 'react'
 import { UserContext } from './context/UserContext'
 import axios from 'axios'
 import { AuthorAddedblogs } from '../Api/api'
+import { Link } from '@mui/material'
+import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+
 
 
 function UserAddedBlogs() {
@@ -23,6 +26,11 @@ useEffect(()=>{fetchuseraddedblog()},[loggedinuser])
   return (
    <div className="userblog">
     <h1 className="userbloghead">Added Blogs</h1>
+    <Link><div className="u-added-blogs-backbtn">
+        <ReplyAllIcon/>
+        <p>Back</p>
+
+        </div></Link>
     <div className="userblogcard">
 { userblogs && userblogs.map((userblog)=>{
     return(
