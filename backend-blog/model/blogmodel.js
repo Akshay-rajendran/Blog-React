@@ -22,7 +22,11 @@ const blogschema=new mongoose.Schema({
     authorname:{
         type:String,
         required:true
-    }   
+    },
+    catagory:{
+        type:String,
+        required:true
+    }
     
 })
 

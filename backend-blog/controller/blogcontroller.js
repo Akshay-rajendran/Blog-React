@@ -82,6 +82,26 @@ const editsignleblog=async(req,res)=>{
         })
     }
 }
+const catagory=async(req,res)=>{
+    let response= await blogModel.find({catagory:req.params.catagory})
+    try {
+
+       res.json({
+        success:true,
+        message:"success",
+        response
+       })
+      
+        
+        
+    } catch (error) {
+        res.json({
+            success:false,
+            msg:"couldnt get items"
+        })
+        console.log(error);
+    }
+}
 
       
-module.exports={addblog, allblog,singleblog,deletesingleblog,editsignleblog}
+module.exports={addblog, allblog,singleblog,deletesingleblog,editsignleblog,catagory}
