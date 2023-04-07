@@ -6,6 +6,7 @@ import axios from 'axios'
 import { AuthorAddedblogs } from '../Api/api'
 import { Link } from '@mui/material'
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+import About from './About'
 
 
 
@@ -24,6 +25,7 @@ async function fetchuseraddedblog(){
 useEffect(()=>{fetchuseraddedblog()},[loggedinuser])
 
   return (
+    <>
    <div className="userblog">
     <h1 className="userbloghead">Added Blogs</h1>
     <Link><div className="u-added-blogs-backbtn">
@@ -40,7 +42,10 @@ useEffect(()=>{fetchuseraddedblog()},[loggedinuser])
 
       </div>
 
+     
    </div>
+<About/>
+</>
   )
 }
 

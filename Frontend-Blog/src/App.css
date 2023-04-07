@@ -6,6 +6,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+  *{
+    scroll-behavior: smooth;
+      transition: all 0.5s;
+  }
 .box{
   width: 100vw;
   height: 100vh;
@@ -64,7 +68,13 @@ button{
 .blogbox{
   width: 100vw;
   height: 100vh;
-  
+  margin-bottom: 100px;
+}
+.added-blogall{
+  background-color: #f3f3f3;
+
+background: rgb(250,251,255);
+background: linear-gradient(90deg, rgba(250,251,255,1) 16%, rgba(15,232,215,1) 41%, rgba(16,203,211,1) 53%, rgba(16,206,211,1) 71%, rgba(16,192,209,1) 86%, rgba(18,137,199,1) 100%);
 }
 .blogh1{
   margin-left: 200px;
@@ -85,10 +95,10 @@ button{
   width: 500px;
   margin-left: 90px;
   height: 40px;
-  border-radius: 8px;
-  border: 1px solid white;
-  font-size: larger;
-  background-color: #d4d4d4;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: larger ;
+  /* background-color: #ffffff; */
 }
 .blogtextarea{
   margin-left: 90px;
@@ -96,8 +106,8 @@ button{
   height: 300px;
   border-radius: 5px;
   font-size: 1.5em;
-  border: 1px solid white;
-  background-color: #d4d4d4;
+  border: 1px solid black;
+  /* background-color: #d4d4d4; */
 }
 .signuph2{
   color: white;
@@ -107,15 +117,17 @@ body{
   background-color:rgb(255, 255, 255);
 }
 .home{
-  background-position: left top;
+  /* background-position: left top; */
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  position: sticky;
+  size-adjust: inherit;
 }
 .home .cmt{
   background-position: left top;
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 2s;
   padding-top:95px;
             margin-bottom:60px;
 }
@@ -131,6 +143,7 @@ body{
 .fadein {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  
 }
 .blogbtn{
   width: 300px;
@@ -140,7 +153,7 @@ body{
 }
 .nav{
   width: 100vw;
-  height: 130px;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -251,6 +264,9 @@ body{
   display: block;
   width: 100%;
   height: 400px
+}
+.slide img{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 @keyframes slider {
     0%, 25%, 100%{left: 0}
@@ -716,27 +732,27 @@ align-items: center;
 .edith1{
   color: red;
   margin-left: 60px;
-  transform: translate(0px,30px);
+  transform: translate(0px,20px);
   font-size: 3em;
   font-family: 'Kaushan Script', cursive;
   
 }
 .edith2{
   color: rgb(255, 255, 255);
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .edith3{
   color: rgb(255, 255, 255);
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   margin-left: 30px;
 }
 .editinput{
   width: 500px;
   margin-left: 30px;
-  font-family: 'Acme', sans-serif;
+  /* font-family: 'Acme', sans-serif; */
   height: 50px;
   font-size: larger;
   border-radius: 10px;
@@ -745,9 +761,9 @@ align-items: center;
 .edittextarea{
   width: 700px;
   margin-left: 30px;
-  font-family: 'Acme', sans-serif;
+  /* font-family: 'Acme', sans-serif; */
   height: 170px;
-  font-size: larger;
+  font-size: 22px;
   background-color: rgba(0, 0, 0, 0.212);
   border-radius: 10px;
   background-color: #ffffff;
@@ -1030,4 +1046,15 @@ img{
   width: 300px;
   height: 200px;
   background-color: white;
+}
+.select-box{
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.add-select{
+  margin-left: 90px;
+  margin-top: 20px;
 }

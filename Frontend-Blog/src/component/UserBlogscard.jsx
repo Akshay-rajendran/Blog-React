@@ -52,12 +52,14 @@ function UserBlogscard({ userblog }) {
         </div>
         <div className="Name">Blog Name : {userblog.blogname}</div>
         <div className="usercarddiscription">Blog Discription : {userblog.blogdiscription}</div>
+        <div className="usercarddiscription">Catagory : {userblog.catagory}</div>
         <div className="Descripion">Posted Date : {userblog.dateposted}</div>
         <div className="delete-edit-icons">
           <button className='usericons'><EditIcon onClick={EDitblog} /></button>
           <button className='usericons'><DeleteIcon   onClick={handleClickOpen}/></button>
    
         </div>
+        
       </div>
     </div>
     {/* <Button variant="outlined" onClick={handleClickOpen}>
