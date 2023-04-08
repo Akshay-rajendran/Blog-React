@@ -19,9 +19,9 @@ function Navbar() {
         </div>
 <Catagory/>
         <div className="navchild2">
-            <p className='button2'><Link className='login-signup-btn' to="signup">SignUp</Link></p>
+            <p className='button2'><Link className='login-signup-btn' to="/signup">SignUp</Link></p>
             {/* <p  className='button3'><Link className='login-signup-btn' to="login">SignIn</Link></p> */}
-        { loggedinuser ? <Logout/>: <p className='button3'><Link  to="login"className='login-signup-btn' >login</Link></p>}
+        { loggedinuser ? <Logout/>: <p className='button3'><Link  to="/login"className='login-signup-btn' >login</Link></p>}
         </div>
 
     </div>

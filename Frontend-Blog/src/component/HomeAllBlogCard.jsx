@@ -1,9 +1,18 @@
-import React from 'react'
+    import React from 'react'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CommentIcon from '@mui/icons-material/Comment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { useNavigate } from 'react-router-dom';
 function HomeAllBlogCard({blogs}) {
+
+const navigate=useNavigate()    
+
+function view(){
+    navigate("/single-blogview",{state:{blogs}})
+
+}
+
     return (
         <div className="allblogcards">
             <article className="card">
@@ -17,8 +26,8 @@ function HomeAllBlogCard({blogs}) {
                     <p className="card_description">{blogs.dateposted}</p>
                     <div className="homeicons">
                         < FavoriteBorderIcon  className="arrow"/>
-                        <CommentIcon  className="arrow"/>
-                        <div className="arrow arr1"><ArrowOutwardIcon className='arr-out'/></div>
+                        <CommentIcon  className="arrow" />
+                        <div className="arrow arr1"  onClick={view}><ArrowOutwardIcon className='arr-out'/></div>
 
                     </div>
 
