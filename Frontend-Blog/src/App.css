@@ -327,6 +327,7 @@ body{
 .card_title {
   font-weight: bold;
   margin-left: 5px;
+  width: 300px;
   
 }
 .catagoryblogs{
@@ -372,6 +373,7 @@ body{
   font-size: 12px;
   margin-bottom: 10px;
   font-size: larger;
+  width: auto;
   color: white;
 }
 
@@ -1186,4 +1188,59 @@ color: red;
   width: 100vw;
   height: auto;
 
+}
+.map-comments{
+  /* border: 2px solid black; */
+  width: auto;
+  /* height: 600PX; */
+  margin-top: 20PX;
+  overflow-x: scroll;
+}
+.map-comments::-webkit-scrollbar {
+  display: none;
+}
+.commentp{
+  width:auto;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.date{
+  transform: translate(700px,22px);
+  font-size: small;
+}
+.AuthorAllBlogs{
+  width: 1100px;
+  height: 300px;
+  margin-left: 100px;
+  border: 1px solid;
+  margin-top: 10px;
+  background-color: rgb(205, 228, 235);
+  border-radius: 20px;
+}
+.AllBlogsOfAuthor{
+  width: 100vw;
+  height: 600px;
+  overflow-y: scroll;
+  margin-top: 60px;
+}
+.allbloghead{
+  margin: 50px;
+}
+.head-btn{
+  display:flex ;
+  width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid; */
+  margin-left: 50px;
+}
+.btn{
+  width: 100px;
+  height:50px;
+
+}
+.Allblogh1{
+  margin: 20px;
 }

@@ -19,6 +19,7 @@ function Catagory() {
 
     const selectref = useRef()
     const [open, setOpen] = React.useState(false);
+    const [heading,setheading]=useState()
     const [catagoryvalue, setcatagoryvalue] = useState([])
 
     async function get() {
@@ -26,6 +27,7 @@ function Catagory() {
         let cata = await axios.get(CatagoryApi + selectref.current.value)
         console.log(cata);
         setcatagoryvalue(cata.data.response)
+        setheading(selectref.current.value)
         setOpen(true);
     }
 
@@ -61,8 +63,8 @@ function Catagory() {
                         >
                             <CloseIcon />
                         </IconButton>
-                        <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-                            Sound
+                        <Typography sx={{ ml: 2, flex: 1 }} variant="h5" component="div">
+                              {heading}
                         </Typography>
                       
                     </Toolbar>
@@ -73,14 +75,14 @@ function Catagory() {
                             <ListItem >
                                 <div className="allblogcards catagoryblogs">
                                     <article className="card">
-                                        <div className="temporary_text">JVJBG </div>
+                                        <div className="temporary_text">{e.blogname} </div>
                                         <div className="card_content">
                                             <div className="home-person-logo">
 
-                                                <span className="card_title">{e.catagory}</span>
+                                                <span className="card_title">{e.blogdiscription}</span>
                                             </div>
-                                            <span className="card_subtitle">IVBIGHOIHOJ</span>
-                                            <p className="card_description">KBIHOLKJO</p>
+                                            <span className="card_subtitle"></span>
+                                            <p className="card_description">{e.dateposted}</p>
                                             <div className="homeicons">
 
 

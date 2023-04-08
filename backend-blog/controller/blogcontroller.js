@@ -102,6 +102,23 @@ const catagory=async(req,res)=>{
         console.log(error);
     }
 }
+const AuthorFullBlog=async(req,res)=>{
+    try {
+        let authorAllBlog=await blogModel.find({authorid:req.params.id})
+        console.log( "full blogs of author", authorAllBlog);
+        res.json({
+            succes:true,
+            msg:"get all blogs of a Author",
+            authorAllBlog
+        })
+    } catch (error) {
+        res.json({
+            success:true,
+            msg:"couldnt get Authors blogs "
+        })
+        console.log(error);
+    }
+}
 
       
-module.exports={addblog, allblog,singleblog,deletesingleblog,editsignleblog,catagory}
+module.exports={addblog, allblog,singleblog,deletesingleblog,editsignleblog,catagory,AuthorFullBlog}

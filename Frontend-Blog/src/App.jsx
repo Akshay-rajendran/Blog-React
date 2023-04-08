@@ -13,6 +13,7 @@ import UserAddedBlogs from './component/UserAddedBlogs'
 import EditSingleBlog from './component/EditSingleBlog'
 import About from './component/About'
 import SIngleBlogView from './component/SIngleBlogView'
+import UserSeeFullBlog from './component/UserSeeFullBlog'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path='u-addedblogs' element={<UserAddedBlogs />} />
             <Route path='editblog' element={<EditSingleBlog />} />
             <Route path='single-blogview' element={<SIngleBlogView />} />
+            <Route path='authorfullblog' element={<UserSeeFullBlog />} />
           </Routes>
         </BrowserRouter>
       </UserProvider>
