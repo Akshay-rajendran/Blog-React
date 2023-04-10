@@ -31,4 +31,28 @@ const Likes = async (req, res) => {
     }
 
 }
-module.exports = { Likes }
+
+
+const getlike=async(req,res)=>{
+ try {
+    let likecount=await LikeModel.findOne({blogid:req.params.id})
+    let count=likecount.like.length
+    res.json({
+        success:true,
+        msg:"likes count",
+        count
+    })
+ } catch (error) {
+    res.json({
+        success:false,
+        msg:'couldnt get likes count'
+    })
+    console.log(error);
+ }
+
+}
+
+
+
+
+module.exports = { Likes,getlike }

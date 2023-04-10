@@ -18,6 +18,6 @@ router.post("/addcomment",addcomment)
 router.get("/getcomments/:id",getcomment)
 router.get("/authorfullblog/:id",AuthorFullBlog)
 router.post("/likes",Likes)
-router.get("/getlike",getlike)
+router.get("/getlike/:id",getlike)
 
 module.exports=router

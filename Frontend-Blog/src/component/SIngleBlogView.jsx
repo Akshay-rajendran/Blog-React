@@ -9,7 +9,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useContext } from 'react';
 import { UserContext } from './context/UserContext';
 import axios from 'axios';
-import { BlogsOfSingleAuthorApi, addComment, getCommentsApi } from '../Api/api';
+import { BlogsOfSingleAuthorApi, addComment, addLikeApi, getCommentsApi, likeCountApi } from '../Api/api';
 import NearMeRoundedIcon from '@mui/icons-material/NearMeRounded';
 function SIngleBlogView() {
     const location = useLocation()
@@ -19,6 +19,7 @@ function SIngleBlogView() {
     const navigate = useNavigate()
     const [AllComment, setAllComment] = useState()
     const [refresh, setRefresh] = useState()
+    const [likes, setlikes] = useState("")
 
 
 
@@ -62,9 +63,7 @@ async function printComment(){     ///it just a function to save this api functi
       printComment()
     }
     }
-    useEffect(() => {
-       
-    }, [refresh])
+
 
     async function authorFullBlog(){
         let response=await axios.get(BlogsOfSingleAuthorApi+location.state.blogs.authorid)
@@ -72,6 +71,35 @@ async function printComment(){     ///it just a function to save this api functi
         navigate("/authorfullblog",{state:response.data.authorAllBlog})
     }
 
+
+
+    async function addlike(){
+
+      let body={
+        blogid:location.state.blogs._id,
+        userid:loggedinuser._id
+      }
+
+
+        let likeadd=await axios.post(addLikeApi,body)
+        console.log("added like",likeadd);
+        if(likeadd.data.msg=="you are already liked"){
+            alert("you already liked")
+          
+        }
+    }
+
+
+    async function likeCount(){
+        let Likecount=await axios.get(likeCountApi+location.state.blogs._id)
+        console.log("get likes",Likecount);
+        setlikes(Likecount.data.count)
+
+
+    }
+  
+
+    useEffect(() => {likeCount() }, [refresh])
 
 
     return (
@@ -88,7 +116,17 @@ async function printComment(){     ///it just a function to save this api functi
 
                 </div>
                 <div className="view-icons">
-                    < FavoriteBorderIcon />
+                    
+
+                <label class="container">
+  <input type="checkbox" />
+  <svg id="Layer_1" version="1.0" onClick={addlike} viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z"></path></svg>
+  <p>{likes && likes}</p>
+</label>
+
+
+
+
                     < CommentIcon onClick={getComment} />
                     <ShareIcon />
                     <p className='commentp' onClick={authorFullBlog} >all blogs of {location.state.blogs.authorname}<NearMeRoundedIcon /></p>
