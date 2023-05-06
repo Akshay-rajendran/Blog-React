@@ -14,25 +14,23 @@ function view(){
 }
 
     return (
-        <div className="allblogcards">
-            <article className="card">
-                <div className="temporary_text">{blogs.blogname} </div>
-                <div className="card_content">
-                    <div className="home-person-logo">
-                        < AccountCircleIcon  className="arrow"/>
-                    <span className="card_title">{blogs.authorname}</span>
-                    </div>
-                    <span className="card_subtitle">{blogs.blogdiscription}</span>
-                    <p className="card_description">{blogs.dateposted}</p>
-                    <div className="homeicons">
-                        < FavoriteBorderIcon  className="arrow"/>
-                        <CommentIcon  className="arrow" />
-                        <div className="arrow arr1"  onClick={view}><ArrowOutwardIcon className='arr-out'/></div>
+        <div className="card-container">
+            <article className="homecard">
+                <div className="cardblogname">{blogs.blogname} </div>
 
-                    </div>
+                   
+                    <span className="cardtitlename">{blogs.authorname}</span>
+                   
+                    <span className="cardsubtitlename">{blogs.blogdiscription}</span>
+                    <p className="carddescriptionname">{blogs.dateposted}</p>
+                  
+                       
 
-                </div>
+                 
+
+              
             </article>
+                        <button className="card-button" onClick={view}>View</button>
 
         </div>
     )

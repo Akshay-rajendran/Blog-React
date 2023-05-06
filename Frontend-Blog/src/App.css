@@ -156,20 +156,20 @@ body{
   margin-left: 100px;
 }
 .nav{
-  width: 100vw;
+  width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color:white;
-  background-color:rgb(224, 186, 79);
+  color:rgb(0, 0, 0);
+  background-color:rgb(216, 216, 208);
   transform: translate(0px,-10px);
   /* position: fixed; */
   
 
 }
 .p{
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 .navchild1{
@@ -178,7 +178,12 @@ body{
   justify-content: space-around;
   align-items: center;
   width: 300px;
-  transform: translate(-100px);
+  /* transform: translate(-100px); */
+}
+.navchild1 a{
+  text-decoration: none;
+  color: #03692a;
+
 }
 .navchild2{
   height: 40px;
@@ -186,30 +191,14 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   /* border: 1px solid black; */
-  transform: translate(70px);
+  /* transform: translate(70px); */
 }
 
 
 /* HomeAllblog css */
 
-.card {
-  position: relative;
-  width: 1200px;
-  height: 250px;
-  /* color: #2e2d31; */
-  /* background: #b49f33; */
-  overflow: hidden;
-  border-radius: 20px;
-  
-    width: 1200px;
-    height: 254px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bbb8b8,
-               -15px -15px 30px #414141;
-
-}
 .home-person-logo{
   width: 120px;
   height: 40px;
@@ -254,68 +243,13 @@ body{
   box-sizing: border-box;
 }
 
-.img-slider {
-    position: relative;
-    width: 100vw;
-    height: 300px;
     
-}
-.img-slider .slider-container {
-    position: absolute;
-    width: 300%;
-    display: flex;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    animation: slider 20s infinite;
-}
-.img-slider .slider-container .slide {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    float: left;
-    overflow: hidden
-}
-.img-slider .slider-container .slide img {
-  display: block;
-  width: 100%;
-  height: 400px
-}
-.slide img{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-@keyframes slider {
-    0%, 25%, 100%{left: 0}
-    
-    30%, 55%{left: -100%}
-    
-    60%, 85%{left: -200%}
-}
 
-.cmt{
-  color: rgb(0, 0, 0);
-  font-size: 7em;
-  margin-top: 120px;
-  font-family: 'Satisfy', cursive;
-  margin-left: 50px;
-  animation-name:tb ;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out ;
 
-}
-@keyframes tb{
-  0% {transform: translateX(-100vw);}
+
   
 
 
-}
-.quote{
-  color: rgb(189, 197, 194);
-  font-size: 3em;
-  font-family: 'Satisfy', cursive;
-  transform: translate(30px,-0px);
-}
 .temporary_text {
   font-weight: bold;
   font-size: 2.5em;
@@ -393,25 +327,9 @@ body{
   opacity: 1;
   transition-delay: .25s;
 }
-.mapallblogs{
-  display: flex;
-  width: 1227px;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: 750px;
-  overflow-y: scroll;
-  border-radius: 30px;
-  /* border: 2px solid black; */
-  margin-left: 50px;
-  transform: translate(0px,180px);
-}
-.mapallblogs::-webkit-scrollbar {
-  display: none;
-}
-  
-.allblogcards{
-  margin: 10px;
-}
+
+
+
 .homeicons{
   width: 1150px;
   height: 50px;
@@ -423,24 +341,8 @@ body{
   /* margin-top: 9px; */
 }
 
-.headblog{
-  font-size: 8em;
-  color:#277a38;
-  margin-left: 60px;
-  text-decoration: underline;
-  margin-top: 100px;
-  font-family: 'Kaushan Script', cursive;
-  --animate__zoomInDown:2s;
-  transform: translate(300px,-30px);
-}
-.logoda{
-  transform: translate(-20px);
-  font-size: 2.5em;
-  font-weight: 1500;
-  font-family: 'Dancing Script', cursive;
-  color: rgb(3, 3, 3);
-  /* font-family: 'Kaushan Script', cursive; */
-}
+
+
 
 
 /* userblogcardcss */
@@ -480,7 +382,7 @@ body{
 }
 
 .login-signup-btn{
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 .userblog{
@@ -498,7 +400,7 @@ body{
   position: relative;
   overflow: hidden;
   z-index: 1;
-  color: #ffffff;
+  color: #000000;
   padding: 0.7em 1.7em;
   /* margin: 10px; */
   font-size: 18px;
@@ -892,170 +794,17 @@ svg:hover .tooltip {
 }
 
 /* about icon */
-.wrapper {
-  display: inline-flex;
-  list-style: none;
-  height: 120px;
-  width: 100%;
-  padding-top: 40px;
-  font-family: "Poppins", sans-serif;
-  justify-content: center;
-}
 
-.wrapper .icon {
-  position: relative;
-  background: #fff;
-  border-radius: 50%;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
 
-.wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #fff;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
 
-.wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #fff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
 
-.wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
 
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #1877F2;
-  color: #fff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1DA1F2;
-  color: #fff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #E4405F;
-  color: #fff;
-}
-.about{
-  width: 100vw;
-background-color: #000;
-height: 500px;
-  transform: translate(0px,0px);
-}
-.abouth1{
-  color: white;
-  font-family: 'Pacifico', cursive;
-
-transform: translate(580px,90px);
-}
-.abouth2{
-  color: white;
-  transform: translate(645px,80px);
-  font-weight: 100;
-  font-family: 'Satisfy', cursive;
-  font-size: small;
-}
-.aboutitem{
-  color: white;
-
-}
-.ab{
-  color:#c4b254;
-}
-.right{
-  /* border: 1px solid white; */
-  width: 600px;
-  display: flex;
-  justify-content: space-around;
-  transform: translate(350px,200px);
-}
-.abouticon{
-  transform: translate(-20px,280px);
-}
-.talkimg{
-  border: none;
-  border-radius: 3px;
-  width: 900px;
-  height: 600px;
-  background-image: url("https://media.istockphoto.com/id/868697268/photo/laptop-with-office-accessories-on-wooden-table-business-background.jpg?s=170667a&w=0&k=20&c=aXb47HQe5pEATtMbbfV0P5AytbVaddwTTfoleiwEsrA=");
-  background-size: cover;
-  
-  background-repeat: no-repeat;
-  transform: translate(250px,-150px);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.blur{
-  width: 900px;
-  height: 600px;
-  background-color:rgba(0, 0, 0, 0.425);
-}
 img{
   width: 100vw;
 }
-.talk{
-  background-color:rgb(233, 233, 233) ;
-}
-.lettalk{
-  margin-left: 220px;
-  color: white;
-  /* margin-top: 100px; */
-  transform: translate(0px,230px);
-  font-size: 2em;
-}
-.l1{
-  margin-left: 375px;
-  font-size: larger;
-  margin-top: 10px;
-}
-.talkbtn{
-  transform: translate(370px,300px);
-  border: 1px solid white;
-  background-color: #c4b254;
-  border-radius: 0px;
-  width: 150px;
-  height: 50px;
-}
+
+
+
 .u-added-blogs-backbtn{
   width: 100px;
   height: 40px;
@@ -1090,7 +839,7 @@ img{
   border-radius: 5px;
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .homecatagory-select:hover option:hover{
   visibility: visible;
@@ -1104,6 +853,7 @@ option{
 }
 .homecatagory-option{
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 /* singleBlogView */

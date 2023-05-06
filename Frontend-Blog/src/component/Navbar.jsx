@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <div className="nav">
-    <div className='logoda'>DA Blogs</div>
+    <div className='homelogo'>DA Blogs</div>
         <div className="navchild1">
         
         <p className='p'>Home</p>
