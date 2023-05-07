@@ -27,7 +27,9 @@ function Home() {
     <div className="home fadein">
       <Navbar />
 
-      <div className="div"></div>
+    
+          <p className="cmt">Explore the world</p>
+          <p className="quote">Have stories to tell not stuff to show</p>
       <div className="img-slider">
         <div className="slider-container">
           <div className="slide"><img src="https://media.istockphoto.com/id/1277015766/photo/sporty-man-on-the-mountain-peak-looking-on-mountain-valley-with-sunbeams-at-colorful-sunset.jpg?b=1&s=170667a&w=0&k=20&c=KL1FAqDRJ3_SHLgiX-dSpmisd3GXwdyR84cmrnHbxjg=" alt="" className="img-cards" /></div>
@@ -40,15 +42,11 @@ function Home() {
       </div>
       <div className="user">
         <>
-          <p className="cmt">Explore the world</p>
-          <p className="quote">Have stories to tell not stuff to show</p>
           <h1 className='headblog'>Blogs</h1>
         </>
-        <div className="userphoto">
-          <div className="circle">
-
-          </div>
-        </div>
+       
+      <div className="fade"></div>
+        
       </div>
       <div className="mapallblogs">
         {allblog && allblog.map((m) => {
