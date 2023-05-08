@@ -17,11 +17,11 @@ function HomeAllBlogCard({ blogs }) {
         <div className="card-container">
             <article className="homecard">
                 <div className="dateandname">
-                    <span className="cardtitlename"><AccountCircleIcon />author:{blogs.authorname}</span>
-                    <p className="carddescriptionname">date:{blogs.dateposted}</p>
+                    <span className="cardtitlename"><AccountCircleIcon />{blogs.authorname}</span>
+                    <p className="carddescriptionname">{blogs.dateposted}</p>
 
                 </div>
-                <div className="cardblogname">name:{blogs.blogname} </div>
+                <div className="cardblogname">Blog : {blogs.blogname} </div>
 
 
 

@@ -23,6 +23,7 @@ async function loginuser(){
     if(res.data.success==true){
     
         setloggedinuser(res.data.user)
+        console.log(res.data.user);;
         localStorage.setItem("loggedinuser",JSON.stringify(res.data.user)) ///to store in local storage in chrome we can see it in inspect---application
         navigate("/addblog")
     }else{

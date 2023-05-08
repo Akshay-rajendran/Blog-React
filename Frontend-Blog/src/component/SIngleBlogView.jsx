@@ -74,19 +74,25 @@ async function printComment(){     ///it just a function to save this api functi
 
 
     async function addlike(){
-
-      let body={
-        blogid:location.state.blogs._id,
-        userid:loggedinuser._id
-      }
-
-
-        let likeadd=await axios.post(addLikeApi,body)
-        console.log("added like",likeadd);
-        if(likeadd.data.msg=="you are already liked"){
-            alert("you already liked")
-          
+        if(loggedinuser){
+            let body={
+                blogid:location.state.blogs._id,
+                userid:loggedinuser._id
+              }
+        
+        
+                let likeadd=await axios.post(addLikeApi,body)
+                console.log("added like",likeadd);
+                if(likeadd.data.msg=="you are already liked"){
+                    alert("you already liked")
+                  
+                }
+            
+        }else{
+            navigate("/login")
         }
+
+      
     }
 
 
